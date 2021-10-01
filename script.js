@@ -26,7 +26,7 @@ var hour17 = $("#17")
 
 function changeColor(){
     var plannerTime = moment().format("HH");
-    console.log(plannerTime);
+    
 
     if (plannerTime === "9"){
         $("#9").addClass("present");
@@ -67,3 +67,12 @@ function changeColor(){
 }
 
 changeColor();
+
+var saveBtn = $(".savebtn")
+saveBtn.on("click", function(){
+    $(this).preventDefault();
+    var writing = $(this).siblings(".planner").val();
+    var timing = $(this).siblings(".planner").attr("id");
+
+})
+
