@@ -25,12 +25,44 @@ var hour16 = $("#16")
 var hour17 = $("#17")
 
 function changeColor(){
-    var plannerTime = moment().format("H");
+    var plannerTime = moment().format("HH");
 
-    if (plannerTime === "hour9"){
+    if (plannerTime === "9"){
         $("#9").addClass("present");
-        $("#10, #11, #12, #13, #14, #15, #16, #17").addClass("future")
-    };
+        $("#10, #11, #12, #13, #14, #15, #16, #17").addClass("future");
+    }
+    if (plannerTime === "10"){
+        $("#10").addClass(present);
+        $("#11, #12, #13, #14, #15, #16, #17").addClass("future");
+    }
+    if (plannerTime === "11") {
+      $("#11").addClass("present");
+      $("#12, #13, #14, #15, #16, #17").addClass("future");  
+    }
+    if (plannerTime === "12") {
+        $("#12").addClass("present");
+        $("#13, #14, #15, #16, #17").addClass("future");
+    }
+    if (plannerTime === "13"){
+        $("#13").addClass("present");
+        $("#14, #15, #16, #17").addClass("future");
+    }
+    if (plannerTime === "14"){
+        $("#14").addClass("present");
+        $("#15, #16, #17").addClass("future");
+
+    }
+    if (plannerTime === "15") {
+        $("#15").addClass("present");
+        $("#16, #17").addClass("future");
+    }
+    if (plannerTime === "16"){
+        $("#16").addClass("present");
+        $("#17").addClass("future");
+    }
+    if (plannerTime === "17"){
+        $("#17").addClass("future");
+    }
 }
 
 console.log(changeColor)
