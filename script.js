@@ -26,6 +26,7 @@ var hour17 = $("#17")
 
 function changeColor(){
     var plannerTime = moment().format("HH");
+    console.log(plannerTime);
 
     if (plannerTime === "9"){
         $("#9").addClass("present");
@@ -61,8 +62,8 @@ function changeColor(){
         $("#17").addClass("future");
     }
     if (plannerTime === "17"){
-        $("#17").addClass("future");
+        $("#17").addClass("present");
     }
 }
 
-console.log(changeColor)
+changeColor();
